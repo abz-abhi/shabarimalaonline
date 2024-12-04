@@ -6,19 +6,23 @@ import VirtualQForm from "./pages/virtualq";
 import Kanikka from "./pages/kanikka";
 import PilgrimGuid from "./pages/pilgrimguid";
 import Footer from "./components/footer";
+import RegistrationForm from "./components/registration";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<VirtualQForm />} />
-        <Route path="/kanikka" element={<Kanikka />} />
-        <Route path="/guid" element={<PilgrimGuid />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="max-w-[2000px]">
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/booking" element={<VirtualQForm />} />
+          <Route path="/kanikka" element={<Kanikka />} />
+          <Route path="/guid" element={<PilgrimGuid />} />
+          <Route path="/register" element={<RegistrationForm />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

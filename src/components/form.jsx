@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   const [passwordType, setPasswordType] = useState("password");
@@ -11,9 +12,7 @@ function LoginForm() {
   };
 
   return (
-    <form
-      className="flex flex-col space-y-6 p-10 max-w-[36rem] bg-[rgb(240,240,240)] relative -top-[29rem] left-[70rem]"
-    >
+    <form className="flex flex-col space-y-6 p-10 max-w-[36rem] bg-[rgb(240,240,240)] relative -top-[29rem] left-[70rem]">
       <div>
         <label htmlFor="email" className="block text-sm font-medium">
           Email ID / Mobile Number
@@ -62,13 +61,10 @@ function LoginForm() {
             className="text-goldenyellow underline hover:text-black pl-2"
             href="#"
           >
-            Register
+            <Link to="/register">Register</Link>
           </a>
         </h1>
-        <a
-          className="text-goldenyellow underline hover:text-black"
-          href="#"
-        >
+        <a className="text-goldenyellow underline hover:text-black" href="#">
           Forgotten Password?
         </a>
       </div>
